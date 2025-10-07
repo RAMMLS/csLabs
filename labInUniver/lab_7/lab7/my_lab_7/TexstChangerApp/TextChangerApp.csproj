@@ -1,0 +1,11 @@
+<Project Sdk = "Microsoft.NET.Sdk">
+ <PropertyGroup>
+  <OutputType>WinExe</OutputType>
+  <TargetFramework>net6.0</TargetFramework>
+  <UseWindowForms>false</UseWindowForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Incude = "GtkSharp" Version = "3.24.24.38" />
+  </ItemGroup>
+</Project>
