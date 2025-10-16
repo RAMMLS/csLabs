@@ -1,10 +1,22 @@
 internal class Program
 {
+	private static void ShowDisplay(CA m)
+	{
+		m.Display();
+	}
+
 	private static void Main(string[] args)
 	{
 		CA cA = new CA();
-		cA.PrintA();
 		CB cB = new CB();
-		cB.PrintA();
+		cA.Display();
+		ShowDisplay(cA);
+		cB.Display();
+		ShowDisplay(cB);
+		cA = cB;
+		cA.Display();
+		ShowDisplay(cA);
+		cB.Display();
+		ShowDisplay(cB);
 	}
 }

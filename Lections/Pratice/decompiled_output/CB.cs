@@ -1,6 +1,9 @@
+using System;
+
 internal class CB : CA
 {
-	public void PrintB()
+	public override void Display()
 	{
+		Console.WriteLine("CB");
 	}
 }
