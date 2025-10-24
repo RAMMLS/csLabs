@@ -1,1 +1,1 @@
-labs of cs
+labs of cs in university
