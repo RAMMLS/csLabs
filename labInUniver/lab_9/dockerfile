@@ -1,0 +1,26 @@
+FROM ubuntu:20.04
+
+# Установка переменных окружения для избежания интерактивных диалогов
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Установка Mono и зависимостей
+RUN apt-get update && apt-get install -y \
+    gnupg \
+    ca-certificates \
+    wget \
+    && wget -qO- https://download.mono-project.com/repo/xamarin.gpg | apt-key add - \
+    && echo "deb https://download.mono-project.com/repo/ubuntu stable-focal main" | tee /etc/apt/sources.list.d/mono-official-stable.list \
+    && apt-get update && apt-get install -y \
+    mono-devel \
+    mono-runtime \
+    libgdiplus \
+    libx11-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+COPY Form1.cs .
+
+# Компиляция приложения
+RUN mcs -r:System.Windows.Forms.dll -r:System.Drawing.dll -r:System.dll -out:Form1.exe Form1.cs
+
+CMD ["mono", "Form1.exe"]
