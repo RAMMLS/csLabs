@@ -132,3 +132,21 @@ class Program
 }
 ```
 
+### Класс Interlocket 
+
+```cs
+public class CountRef {
+	private long refCount = 0;
+	public void AddRef() {
+		Interlocked.Increment(ref refCount);
+	}
+	
+	public void Release() {
+		Interlocked.Decrement(ref refCount);
+	}
+	//
+	//
+	//
+}
+```
+
