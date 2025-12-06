@@ -11,14 +11,14 @@ class Say
             {
                 Console.Write("Да ");
                 //Monitor.Pulse(this); // Уведомляем другой поток
-                Monitor.Wait(this);  // Ожидаем уведомления
+                //Monitor.Wait(this);  // Ожидаем уведомления
             }
 
             if (name == "NO")
             {
                 Console.WriteLine("Нет ");
                 //Monitor.Pulse(this); // Уведомляем другой поток
-                Monitor.Wait(this);  // Освобождаем объект
+                //Monitor.Wait(this);  // Освобождаем объект
             }
         }
     }
