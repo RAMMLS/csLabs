@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Lection 12"
             }
+          },
+          {
+            "id": "217ea0b6f79979c6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lection 13.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lection 13"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -183,10 +198,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "d07819955794cdd8",
+  "active": "217ea0b6f79979c6",
   "lastOpenFiles": [
-    "Lection 11.md",
+    "Lection 13.md",
     "Lection 12.md",
+    "Lection 11.md",
     "Welcome.md"
   ]
 }
